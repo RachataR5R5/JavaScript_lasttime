@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h2>JavaScript Array.forEach</h2> <!-- แสดงหัวข้อหัวข้อ "JavaScript Array.forEach" -->
+
+        <p>Calls a function once for each array element.</p> <!-- คำอธิบายเกี่ยวกับการใช้ .forEach เพื่อเรียกฟังก์ชันทีละอิลิเมนต์ในอาร์เรย์ -->
+        
+        <!-- ส่วนที่จะแสดงผลลัพธ์ -->
+        <P id="demo"></P> <!-- สร้างพารากราฟที่มี id "demo" เพื่อให้ JavaScript สามารถแสดงผลลัพธ์ลงไป -->
+
+        <script>
+            var txt = "";  //-- สร้างตัวแปร txt ที่จะใช้เก็บค่าผลลัพธ์จากการวนลูป //
+
+            var numbers = [45, 4, 9, 16, 25];  //-- สร้างอาร์เรย์ที่มีค่าคือ 45, 4, 9, 16, และ 25 -->
+
+            numbers.forEach(myFunction);  //-- ใช้ .forEach เพื่อเรียกฟังก์ชัน myFunction สำหรับแต่ละสมาชิกในอาร์เรย์ -->
+
+            document.getElementById("demo").innerHTML = txt;  //-- แสดงผลลัพธ์ที่เก็บใน txt ลงในแท็ก <p> ที่มี id เป็น "demo" -->
+
+            function myFunction(value) {
+                txt = txt + value + "<br>";  //-- ฟังก์ชันนี้จะรับค่า value จากแต่ละสมาชิกในอาร์เรย์ แล้วเพิ่มค่า value ลงใน txt ตามด้วย <br> เพื่อแสดงในบรรทัดใหม่ -->
+            }
+        </script>
+    </body>
+</html>
